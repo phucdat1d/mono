@@ -4382,6 +4382,10 @@ namespace System.Windows.Forms
 				return true;
 			}
 
+            if ((context_menu_strip != null) && context_menu_strip.ProcessCmdKey(ref msg, keyData)) {
+                return true;
+            }
+
 			if (parent != null) {
 				return parent.ProcessCmdKey(ref msg, keyData);
 			}
